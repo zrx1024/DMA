@@ -180,7 +180,7 @@ def divide_known_unknown_associations(A, exception=None, special=None):
                 unknown.append([special,j,0])
     else:
         for i in range(A.shape[0]):
-            if i == exception: pass
+            if i == exception: continue
             for j in range(A.shape[1]):
                 if A[i][j] == 1:
                     known.append([i,j,1])
